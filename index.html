@@ -334,6 +334,198 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/07/22/Git-Learn-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Yuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/22/Git-Learn-2/" itemprop="url">
+                  Git-Learn-2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-22 22:21:39 / Modified: 23:31:00" itemprop="dateCreated datePublished" datetime="2018-07-22T22:21:39+08:00">2018-07-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>为了不给GitHub带来困扰，这货怎么又新建了一个Test Repository<br>我决定自己改一个GitLab玩</p>
+<ol>
+<li><p>docker  创建GitLab环境，省略</p>
+</li>
+<li><p>在GitLab上创建一个新的Reporsitory， 项目名称为git-learn-test </p>
+</li>
+<li><p>clone到本地</p>
+</li>
+</ol>
+<p>目前的状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">remote:</span><br><span class="line">	origin:</span><br><span class="line">		master</span><br><span class="line"><span class="built_in">local</span>:</span><br><span class="line">	master</span><br></pre></td></tr></table></figure>
+<p>在本地创建了一个新的文件test_file.txt<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim test_file.txt</span><br><span class="line">This is a <span class="built_in">test</span> file, and tested from <span class="built_in">local</span>.</span><br></pre></td></tr></table></figure></p>
+<p>民工二连</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"local add a new file"</span></span><br><span class="line"></span><br><span class="line">[master (root-commit) fb522ec] <span class="built_in">local</span> add a new file</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 test_file.txt</span><br></pre></td></tr></table></figure>
+<p>目前的状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init</span><br><span class="line"><span class="built_in">local</span>:  init  --&gt; fb522ec</span><br></pre></td></tr></table></figure>
+<p>现在本地比远程仓库多了一个commit，那现在就可以提交给远程了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br><span class="line"></span><br><span class="line">Counting objects: 3, <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (3/3), 263 bytes | 263.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">Total 3 (delta 0), reused 0 (delta 0)</span><br><span class="line">To http://localhost/FrankeyYuan/git-learn-test.git</span><br><span class="line"> * [new branch]      master -&gt; master</span><br></pre></td></tr></table></figure>
+<p>此时再打开GitLab网站看，就发现已经更新了，所以现在的状态应该是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init --&gt; fb522ec</span><br><span class="line">local:  init --&gt; fb522ec</span><br></pre></td></tr></table></figure>
+<p>现在假设另一个人小B也在维护这个系统。（为了方便，不再下载一遍了，直接在gitlab上改）</p>
+<p>修改 test_file.txt文件为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This is a test file, and tested from local.</span><br><span class="line"></span><br><span class="line">Added by xiao-A via gitLab.</span><br></pre></td></tr></table></figure></p>
+<p>commit message: 2. Added by xiao-A via gitLab.<br>commit id: 6ab5a9b8</p>
+<p>现在的状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8</span><br><span class="line">local:  init --&gt; fb522ec</span><br></pre></td></tr></table></figure></p>
+<p>那本地现在怎么办呢？</p>
+<p>一种一种情况测试一下</p>
+<ol>
+<li>本地什么都没动, 直接git pull<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">remote: Counting objects: 3, <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (2/2), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0)</span><br><span class="line">Unpacking objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line">From http://localhost/FrankeyYuan/git-learn-test</span><br><span class="line">   fb522ec..6ab5a9b  master     -&gt; origin/master</span><br><span class="line">Updating fb522ec..6ab5a9b</span><br><span class="line">Fast-forward</span><br><span class="line"> test_file.txt | 2 ++</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"></span><br><span class="line">glog</span><br><span class="line">* 6ab5a9b (HEAD -&gt; master, origin/master) 2. Added by xiao-A via gitLab.</span><br><span class="line">* fb522ec <span class="built_in">local</span> add a new file</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8</span><br></pre></td></tr></table></figure>
+<ol>
+<li>本地修改了，但是互相有影响，需要解决冲突<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard head^</span><br><span class="line">This is a test file, and tested from local. Added by local, local 2nd commit.</span><br><span class="line"></span><br><span class="line">git pull</span><br><span class="line">Updating fb522ec..6ab5a9b</span><br><span class="line">error: Your local changes to the following files would be overwritten by merge:</span><br><span class="line">	test_file.txt</span><br><span class="line">Please commit your changes or stash them before you merge.</span><br><span class="line">Aborting</span><br><span class="line"></span><br><span class="line">git commit -am &quot;Added by local, local 2nd commit.&quot;</span><br><span class="line">[master b9c26af] Added by local, local 2nd commit.</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line"> glog</span><br><span class="line"></span><br><span class="line">* b9c26af (HEAD -&gt; master) Added by local, local 2nd commit.</span><br><span class="line">* fb522ec local add a new file</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8</span><br><span class="line">local:  init --&gt; fb522ec                --&gt; b9c26af</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">Auto-merging test_file.txt</span><br><span class="line">CONFLICT (content): Merge conflict in test_file.txt</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">2 This is a test file, and tested from local. Added by local, local 2nd commit.</span><br><span class="line">3 =======</span><br><span class="line">4 This is a test file, and tested from local.</span><br><span class="line">5</span><br><span class="line">6 Added by xiao-A via gitLab.</span><br><span class="line">7 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 6ab5a9b82eb3844444a2549072e132e3c6111c59</span><br></pre></td></tr></table></figure>
+<p>把文件修改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This is a test file, and tested from local. Added by local, local 2nd commit.</span><br><span class="line"></span><br><span class="line">Added by xiao-A via gitLab.</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">git commit -am &quot;fix conflict&quot;</span><br><span class="line"></span><br><span class="line">glog</span><br><span class="line"></span><br><span class="line">*   22c7b57 (HEAD -&gt; master) fix conflict</span><br><span class="line">|\</span><br><span class="line">| * 6ab5a9b (origin/master) 2. Added by xiao-A via gitLab.</span><br><span class="line">* | b9c26af Added by local, local 2nd commit.</span><br><span class="line">|/</span><br><span class="line">* fb522ec local add a new file</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git log</span><br><span class="line"></span><br><span class="line">commit 22c7b57c45bba10e514f547234212bfd7ac3db48 (HEAD -&gt; master)</span><br><span class="line">Merge: b9c26af 6ab5a9b</span><br><span class="line">Author: Yufeng Yuan &lt;yufengyuanx@gmail.com&gt;</span><br><span class="line">Date:   Sun Jul 22 22:56:12 2018 +0800</span><br><span class="line"></span><br><span class="line">    fix conflict</span><br><span class="line"></span><br><span class="line">commit b9c26af15bad4fdc465d87a42e389d82feff4aec</span><br><span class="line">Author: Yufeng Yuan &lt;yufengyuanx@gmail.com&gt;</span><br><span class="line">Date:   Sun Jul 22 22:52:02 2018 +0800</span><br><span class="line"></span><br><span class="line">    Added by local, local 2nd commit.</span><br><span class="line"></span><br><span class="line">commit 6ab5a9b82eb3844444a2549072e132e3c6111c59 (origin/master)</span><br><span class="line">Author: Frank Yuan &lt;yufeng_yuan@student.uml.edu&gt;</span><br><span class="line">Date:   Sun Jul 22 14:40:48 2018 +0000</span><br><span class="line"></span><br><span class="line">    2. Added by xiao-A via gitLab.</span><br><span class="line"></span><br><span class="line">commit fb522ec594e3226519204f64c5ace242792b1dc8</span><br><span class="line">Author: Yufeng Yuan &lt;yufengyuanx@gmail.com&gt;</span><br><span class="line">Date:   Sun Jul 22 22:28:42 2018 +0800</span><br><span class="line"></span><br><span class="line">    local add a new file</span><br><span class="line"></span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57</span><br></pre></td></tr></table></figure>
+<ol>
+<li>本地修改了，但是互相之间没有影响</li>
+</ol>
+<p>继续修改gitlab</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This is a test file, and tested from local. Added by local, local 2nd commit.</span><br><span class="line"></span><br><span class="line">Added by xiao-A via gitLab.</span><br><span class="line"></span><br><span class="line">Added by xiao-A via gitLab, 2nd commit from gitlab.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">commit message: 2nd commit from gitlab</span><br><span class="line">commit id: 5d3af3e9</span><br><span class="line"></span><br><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57</span><br></pre></td></tr></table></figure>
+<p>本地创建新文件 test_file2.txt<br>Added by local, new file, filename: test_file2.txt</p>
+<p>民工二连</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -am &quot;Added by local, new file, filename: test_file2.txt&quot;</span><br><span class="line"></span><br><span class="line">[master c79c882] Added by local, new file, filename: test_file2.txt</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 test_file2.txt</span><br></pre></td></tr></table></figure>
+<p>这个时候pull会怎么样呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Compressing objects: 100% (2/2), done.</span><br><span class="line">remote: Total 3 (delta 1), reused 0 (delta 0)</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From http://localhost/FrankeyYuan/git-learn-test</span><br><span class="line">   22c7b57..5d3af3e  master     -&gt; origin/master</span><br><span class="line">Merge made by the &apos;recursive&apos; strategy.</span><br><span class="line"> test_file.txt | 2 ++</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"></span><br><span class="line"> glog</span><br><span class="line"></span><br><span class="line"> *   6fab655 (HEAD -&gt; master) Merge branch &apos;master&apos; of http://localhost/FrankeyYuan/git-learn-test</span><br><span class="line">|\</span><br><span class="line">| * 5d3af3e (origin/master) 2nd commit from gitlab</span><br><span class="line">* | c79c882 Added by local, new file, filename: test_file2.txt</span><br><span class="line">|/</span><br><span class="line">*   22c7b57 fix conflict</span><br><span class="line">|\</span><br><span class="line">| * 6ab5a9b 2. Added by xiao-A via gitLab.</span><br><span class="line">* | b9c26af Added by local, local 2nd commit.</span><br><span class="line">|/</span><br><span class="line">* fb522ec local add a new file</span><br><span class="line"></span><br><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9 --&gt; c79c882 --&gt; 6fab655</span><br><span class="line"></span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9 --&gt; c79c882 --&gt; 6fab655</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9 --&gt; c79c882 --&gt; 6fab655</span><br></pre></td></tr></table></figure>
+<p>经过测试，如果本地什么都没有动，直接pull，没问题<br>如果本地修改过了，需要先commit<br>如果commit之后pull有冲突，需要先fix conflict再commit<br>如果commit之后pull没有冲突，需要为这次merge创建一个新的commit</p>
+<p>TODO: git fetch<br>TODO: git stash<br>TODO: git reset/checkout<br>TODO: git commit —amend<br>TODO: git tag<br>TODO: git alias</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/07/12/python-path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -397,7 +589,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-22 01:02:21" itemprop="dateModified" datetime="2018-07-22T01:02:21+08:00">2018-07-22</time>
+                <time title="Modified: 2018-07-22 22:30:14" itemprop="dateModified" datetime="2018-07-22T22:30:14+08:00">2018-07-22</time>
               
             
           </span>
@@ -492,7 +684,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/06/25/git-learn/">
+    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/06/25/Git-Learn-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Frank Yuan">
@@ -511,8 +703,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/25/git-learn/" itemprop="url">
-                  git-learn
+                <a class="post-title-link" href="/2018/06/25/Git-Learn-1/" itemprop="url">
+                  Git-Learn-1
                 </a>
               
             
@@ -555,7 +747,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-22 00:55:50" itemprop="dateModified" datetime="2018-07-22T00:55:50+08:00">2018-07-22</time>
+                <time title="Modified: 2018-07-22 23:23:24" itemprop="dateModified" datetime="2018-07-22T23:23:24+08:00">2018-07-22</time>
               
             
           </span>
@@ -599,7 +791,7 @@
 <p>多了一个.git的文件夹</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/06/25/git-learn/#more" rel="contents">
+            <a class="btn" href="/2018/06/25/Git-Learn-1/#more" rel="contents">
               Read more &raquo;
             </a>
           </div>
@@ -1722,157 +1914,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/04/30/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/30/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-04-30 01:30:32 / Modified: 03:01:08" itemprop="dateCreated datePublished" datetime="2018-04-30T01:30:32+08:00">2018-04-30</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1917,7 +1965,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1957,7 +2005,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -2204,9 +2254,9 @@
       
     
       
-        
-      
     
+      
+        
       
     
       
