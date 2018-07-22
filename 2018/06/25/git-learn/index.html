@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Frank">
 <meta property="og:description" content="PersonalLocalSingle Branch (Master Only)首先先创建一个空的文件夹 1mkdir learn-1 现在发生了什么呢？啥也没发生，就是创建了一个空的文件夹而已。那么如何才能让git帮助我们管理我们的文件、文档、代码呢？ 12cd learn-1git init git init 这个指令是什么意思呢？就是让git来托管当前这一整个文件。 我们可以仔细看一下，打完">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-25T16:22:55.183Z">
+<meta property="og:updated_time" content="2018-07-21T16:55:50.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git-learn">
 <meta name="twitter:description" content="PersonalLocalSingle Branch (Master Only)首先先创建一个空的文件夹 1mkdir learn-1 现在发生了什么呢？啥也没发生，就是创建了一个空的文件夹而已。那么如何才能让git帮助我们管理我们的文件、文档、代码呢？ 12cd learn-1git init git init 这个指令是什么意思呢？就是让git来托管当前这一整个文件。 我们可以仔细看一下，打完">
@@ -393,7 +393,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-06-26 00:22:55" itemprop="dateModified" datetime="2018-06-26T00:22:55+08:00">2018-06-26</time>
+                <time title="Modified: 2018-07-22 00:55:50" itemprop="dateModified" datetime="2018-07-22T00:55:50+08:00">2018-07-22</time>
               
             
           </span>
@@ -434,6 +434,7 @@
 <p>我们可以仔细看一下，打完这个指令之后发生了什么。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ls -a </span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">..</span><br><span class="line">.git</span><br></pre></td></tr></table></figure>
 <p>多了一个.git的文件夹</p>
+<a id="more"></a>
 <p>进去仔细看一下，有什么呢<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ls .git</span><br><span class="line"></span><br><span class="line">HEAD        </span><br><span class="line">branches    </span><br><span class="line">config      </span><br><span class="line">description </span><br><span class="line">hooks       </span><br><span class="line">info        </span><br><span class="line">objects     </span><br><span class="line">refs</span><br></pre></td></tr></table></figure></p>
 <p>这个文件夹就是git帮助我们管理所需要的东西。</p>
 <p>之后我们创建第一个文件。（注：我会在文件里写上这是第几条命令，哪一个文件夹，写的内容的格式）<br>创建文件1.txt，并写入内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"0: filename: 1.txt content: first sentence"</span> &gt; 1.txt</span><br></pre></td></tr></table></figure></p>
