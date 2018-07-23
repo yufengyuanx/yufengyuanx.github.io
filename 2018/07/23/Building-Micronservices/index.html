@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Times New Roman:300,300italic,400,400italic,700,700italic|Courier New:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="基本信息O’REILLY 图灵程序设计丛书中文名：微服务设计Name: Building Mecronservices作者： Sam Newman翻译： 崔立强，张俊ISBN: 978-7-115-42026-8">
+<meta name="keywords" content="读书笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building-Micronservices">
+<meta property="og:url" content="http://yufengyuanx.github.io/2018/07/23/Building-Micronservices/index.html">
+<meta property="og:site_name" content="Frank">
+<meta property="og:description" content="基本信息O’REILLY 图灵程序设计丛书中文名：微服务设计Name: Building Mecronservices作者： Sam Newman翻译： 崔立强，张俊ISBN: 978-7-115-42026-8">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-23T15:30:13.430Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building-Micronservices">
+<meta name="twitter:description" content="基本信息O’REILLY 图灵程序设计丛书中文名：微服务设计Name: Building Mecronservices作者： Sam Newman翻译： 崔立强，张俊ISBN: 978-7-115-42026-8">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yufengyuanx.github.io/2018/07/23/Building-Micronservices/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Building-Micronservices | Frank</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Frank</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Frank's Blogs</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/07/23/Building-Micronservices/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Yuan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Building-Micronservices
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-07-23 00:43:20 / Modified: 23:30:13" itemprop="dateCreated datePublished" datetime="2018-07-23T00:43:20+08:00">2018-07-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h1><p>O’REILLY 图灵程序设计丛书<br>中文名：微服务设计<br>Name: Building Mecronservices<br>作者： Sam Newman<br>翻译： 崔立强，张俊<br>ISBN: 978-7-115-42026-8</p>
+<a id="more"></a>
+<h1 id="第一章-微服务"><a href="#第一章-微服务" class="headerlink" title="第一章 微服务"></a>第一章 微服务</h1><p>小团队，他们各自对某个服务的全生命周期负责。</p>
+<h2 id="什么是微服务"><a href="#什么是微服务" class="headerlink" title="什么是微服务"></a>什么是微服务</h2><p>微服务就是一些协同工作的小而自制的服务。</p>
+<h3 id="很小，专注于做好一件事"><a href="#很小，专注于做好一件事" class="headerlink" title="很小，专注于做好一件事"></a>很小，专注于做好一件事</h3><p><strong>单一职责原则</strong>（Single Responsibility Principle）— Robert C. Martin：<br>把因<strong><em>相同原因而变化</em></strong>的东西聚合到一起，而把因<strong><em>不同原因而变化</em></strong>的东西分离开来。<br>根据业务的边界来确定服务的边界。<br>Jon Evaes 认为： 一个微服务应该可以在两周内完全重写。</p>
+<h3 id="自治性"><a href="#自治性" class="headerlink" title="自治性"></a>自治性</h3><p>一个微服务就是一个实体。PAAS 或者是一个进程。<br>服务之间均通过<strong>网络调用</strong>进行通信，从而加强服务之间的隔离性，避免紧耦合。<br>你是否能够修改一个服务并对其进行部署，而不影响其他任何服务？</p>
+<h2 id="主要好处"><a href="#主要好处" class="headerlink" title="主要好处"></a>主要好处</h2><h3 id="技术异构性"><a href="#技术异构性" class="headerlink" title="技术异构性"></a>技术异构性</h3><p>可以在不同的服务中使用最合适该服务的技术。<br>对于社交网络来说，图数据库能够更好的处理用户之间的交互操作。<br>对于用户发布的帖子而言，文档数据库可能是一个更好的选择。</p>
+<h3 id="弹性"><a href="#弹性" class="headerlink" title="弹性"></a>弹性</h3><p>如果系统中的一个组建不可用了，但并没有导致级联故障，那木系统的其他部分还可以正常运行。</p>
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p>可以只对需要扩展的服务进行扩展，而不需要对整体进行扩展。</p>
+<h3 id="简单部署"><a href="#简单部署" class="headerlink" title="简单部署"></a>简单部署</h3><p>两次发布之间的差异越大，出错的可能性就更大。<br>微服务可以更快的对特定部分的代码进行部署。</p>
+<h3 id="与组织结构相匹配"><a href="#与组织结构相匹配" class="headerlink" title="与组织结构相匹配"></a>与组织结构相匹配</h3><p>系统架构与人员组织架构想匹配。</p>
+<h3 id="可组合性"><a href="#可组合性" class="headerlink" title="可组合性"></a>可组合性</h3><p>易于重用已有功能。<br>个人思考：比如公司的用户名密码系统，并不需要没有应用都去访问数据库，只需要给这个service发送请求即可。</p>
+<h3 id="对可替代性的优化"><a href="#对可替代性的优化" class="headerlink" title="对可替代性的优化"></a>对可替代性的优化</h3><p>易于替换旧系统，重新实现某一个服务或者直接删除该服务是相对可操作的。</p>
+<h2 id="面向服务的架构"><a href="#面向服务的架构" class="headerlink" title="面向服务的架构"></a>面向服务的架构</h2><p>服务之间通过网络调用，而非采用进程内调用的方式进行通信。</p>
+<h2 id="其他分解技术"><a href="#其他分解技术" class="headerlink" title="其他分解技术"></a>其他分解技术</h2><p>两个优势：1. 具有较小的力度 2. 能够在解决问题的方法上给予你更多的选择。</p>
+<h3 id="共享库"><a href="#共享库" class="headerlink" title="共享库"></a>共享库</h3><p>缺点：只能在同一个语言中，或者至少在同一个平台上使用（JVM）。</p>
+<h3 id="模块（-）"><a href="#模块（-）" class="headerlink" title="模块（?）"></a>模块（?）</h3><p>OSGI(Open Source Gateway Initiative， 开放服务网关协议)<br>在一个进程内很容易使模块之间过渡耦合，带来的复杂度远远大于它带来的好处。</p>
+<h2 id="没有银弹"><a href="#没有银弹" class="headerlink" title="没有银弹"></a>没有银弹</h2><p>微服务并于一定适合所有场景。</p>
+<h1 id="第二章-演化式架构师"><a href="#第二章-演化式架构师" class="headerlink" title="第二章 演化式架构师"></a>第二章 演化式架构师</h1><h2 id="不准确的比较"><a href="#不准确的比较" class="headerlink" title="不准确的比较"></a>不准确的比较</h2><p>“你总提及的那个词，它的含义与你想表达的意思并不一样”<br>架构师的一个重要职责是，确保团队有共同的技术愿景，以帮助我们向客户交付他们想要的系统。<br>我们不是工程师也不是建筑师。</p>
+<h2 id="架构师的演化视角"><a href="#架构师的演化视角" class="headerlink" title="架构师的演化视角"></a>架构师的演化视角</h2><p>因此架构师必须改变那种从一开始就要设计出完美产品的想法，相反我们应该设计出一个合理的框架，在这个框架下可以慢慢演化出正确的系统，<br>并且一旦我们学到了更多知识，应该可以很容易地应用到系统中。<br>架构师的职责有点像城市规划师的职责。<br>架构师的职责之一就是保证该系统适合开发人员在其上工作。</p>
+<h2 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h2><p>作为架构师，不应该过多关注每个区域内发生的事情，而应该多关注区域之间的事情。<br>架构师需要花时间和团队一起进行编码。</p>
+<h2 id="一个原则性的方法"><a href="#一个原则性的方法" class="headerlink" title="一个原则性的方法"></a>一个原则性的方法</h2><p>“规则对于智者来说是指导，对于愚者来说是遵从”<br>在微服务架构中，你要做很多的取舍。</p>
+<h3 id="战略目标"><a href="#战略目标" class="headerlink" title="战略目标"></a>战略目标</h3><p>一般只在公司或者部门层面制定，是组织前进的方向。</p>
+<h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><p>原则不是一成不变的。<br>如果组织的一个战略目标是缩短心痛能上线的周期，那么一个可能的原则就是，交付团队应该对整个软件声明周期有完全的控制权。<br>如果组织的一个战略目标是在其他国家快速增长业务，你需要使用的原则就是，整个系统必须能够方便地部署到相应的国家。<br><a href="http://www.12factor.net" target="_blank" rel="noopener">Heroku的12 Factors</a></p>
+<h3 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h3><p>代码规范，日志数据集中捕获或者HTTP/REST作为标准集成风格等。</p>
+<h3 id="将原则和实践相结合"><a href="#将原则和实践相结合" class="headerlink" title="将原则和实践相结合"></a>将原则和实践相结合</h3><p>实践不同没有关系，只要他们都能够映射到相同的原则即可。</p>
+<h3 id="真实世界的例子"><a href="#真实世界的例子" class="headerlink" title="真实世界的例子"></a>真实世界的例子</h3><p>原则和时间之间相互影响。几年间，实践改动得很频繁，而原则基本上没怎么变。</p>
+<h2 id="要求的标准"><a href="#要求的标准" class="headerlink" title="要求的标准"></a>要求的标准</h2><p>给出一个好服务的例子来阐释好服务的特点。<br>系统应该由很多小的但有声明周期的组件构成，而且这些组件之间有着紧密的关联。</p>
+<h3 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h3><p>能够清晰地描绘出跨服务系统的健康状态非常关键。<br>确保所有的服务使用同样的方式报告健康状态及其与监控相关的数据。<br>日志功能和监控情况类似，需要集中式管理。</p>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>如果你选用了HTTP/REST，在URL中你使用动词还是名词？你会如何处理资源的分页？你会如何处理不同版本的API</p>
+<h3 id="架构安全性"><a href="#架构安全性" class="headerlink" title="架构安全性"></a>架构安全性</h3><p>必须保证每个服务都可以应对下游服务的错误请求。没有很好处理下游错误请求的服务越多，我们的系统会越脆弱。<br>返回码应该遵循一定的规则。</p>
+<ol>
+<li>正确并且被正确处理的请求。</li>
+<li>错误请求，并且服务识别出了它是错误的，但什么都没做。</li>
+<li>被访问的服务宕机了，所以无法判断请求是否正常。</li>
+</ol>
+<h2 id="代码治理"><a href="#代码治理" class="headerlink" title="代码治理"></a>代码治理</h2><p>提供范例和服务代码模板。</p>
+<h3 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h3><p>如果在系统中有比较好的代码范例可以模仿，纳闷他们也不会错的很离谱。<br>优秀范例应该来自真实项目，而不是专门实现的一个完美的例子。</p>
+<h3 id="剪裁服务代码模板"><a href="#剪裁服务代码模板" class="headerlink" title="剪裁服务代码模板"></a>剪裁服务代码模板</h3><p>当开发人员想要实现一个新服务时，所有实现核心属性的那些代码都应该是现成的。<br>比如提供健康检查，HTTP服务，提供指标数据结构等。<br>没必要增加太多的功能到中心框架中，一定要想清楚它的职责是什么。<br>DRY don’t repeat yourself</p>
+<h2 id="技术债务"><a href="#技术债务" class="headerlink" title="技术债务"></a>技术债务</h2><p>短期可能会带来利益，但是长期来看是要付出带价的。<br>维护一个债务列表，并且定期回顾。</p>
+<h2 id="例外管理"><a href="#例外管理" class="headerlink" title="例外管理"></a>例外管理</h2><p>有时候我们会确定针对某个规则破一次例，然后把它记录下来。<br>在大多数场景下使用MySql做存储，如果是数据快速增长的场景，可以使用Cassandra。</p>
+<h2 id="集中治理和领导"><a href="#集中治理和领导" class="headerlink" title="集中治理和领导"></a>集中治理和领导</h2><p>架构师的部门职责是治理。<br>COBIT(Control Objectives for Information and Related Technology，信息和相关技术的控制目标)<br>致力通过评估干系人的需求、当前情况及下一步的可能性来确保企业目标的达成，通过排优先级和做决策来设定方向。<br>对于已经达成一致的方向和目标进行监督。<br>治理是一个小组的活动。可以讨论，通过例会等形式。<br>架构师领导这个小组，但是每个交付团队都有人参与。架构师负责确保该组织的正常运作，整个小组都要对治理负责。</p>
+<h2 id="建设团队"><a href="#建设团队" class="headerlink" title="建设团队"></a>建设团队</h2><p>帮助你的团队成长，帮助他们理解这个愿景，并保证他们可以积极地参与到愿景的实现中来。<br>单个架构一个人很难发挥，但是小的服务可以让团队得到足够的锻炼，达成自己的职业目标，同时防止负担过重。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>愿景</li>
+<li>同理心</li>
+<li>合作</li>
+<li>适应性</li>
+<li>自治性</li>
+<li>治理</li>
+</ol>
+<h1 id="第三章-如何构建服务"><a href="#第三章-如何构建服务" class="headerlink" title="第三章 如何构建服务"></a>第三章 如何构建服务</h1><h1 id="第四章-集成"><a href="#第四章-集成" class="headerlink" title="第四章 集成"></a>第四章 集成</h1><h1 id="第五章-分解单块系统"><a href="#第五章-分解单块系统" class="headerlink" title="第五章 分解单块系统"></a>第五章 分解单块系统</h1><h1 id="第六章-部署"><a href="#第六章-部署" class="headerlink" title="第六章 部署"></a>第六章 部署</h1><h1 id="第七章-测试"><a href="#第七章-测试" class="headerlink" title="第七章 测试"></a>第七章 测试</h1><h1 id="第八章-检控"><a href="#第八章-检控" class="headerlink" title="第八章 检控"></a>第八章 检控</h1><h1 id="第九章-安全"><a href="#第九章-安全" class="headerlink" title="第九章 安全"></a>第九章 安全</h1><h1 id="第十章-康威定律和系统设计"><a href="#第十章-康威定律和系统设计" class="headerlink" title="第十章 康威定律和系统设计"></a>第十章 康威定律和系统设计</h1><h1 id="第十一章-规模化微服务"><a href="#第十一章-规模化微服务" class="headerlink" title="第十一章 规模化微服务"></a>第十一章 规模化微服务</h1><h1 id="第十二章-总结"><a href="#第十二章-总结" class="headerlink" title="第十二章 总结"></a>第十二章 总结</h1><h1 id="提到的书籍"><a href="#提到的书籍" class="headerlink" title="提到的书籍"></a>提到的书籍</h1><p>领域驱动设计        Eris Evans<br>六边形架构        Alistair Cockburn</p>
+<h1 id="专业名词"><a href="#专业名词" class="headerlink" title="专业名词"></a>专业名词</h1><p>SRP    Single Responsibility Principle<br>SOA Service-Oriented Architecture<br>断路器工具 Hystrix Spring Cloud<br>DRY don’t repeat yourself</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/22/Git-Learn-2/" rel="next" title="Git-Learn-2">
+                <i class="fa fa-chevron-left"></i> Git-Learn-2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="Frank Yuan" />
+            
+              <p class="site-author-name" itemprop="name">Frank Yuan</p>
+              <p class="site-description motion-element" itemprop="description">Solid SDE</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yufengyuanx" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yufengyuanx@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.linkedin.com/in/yuanyufeng" target="_blank" title="LinkedIn"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本信息"><span class="nav-number">1.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-微服务"><span class="nav-number">2.</span> <span class="nav-text">第一章 微服务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是微服务"><span class="nav-number">2.1.</span> <span class="nav-text">什么是微服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#很小，专注于做好一件事"><span class="nav-number">2.1.1.</span> <span class="nav-text">很小，专注于做好一件事</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自治性"><span class="nav-number">2.1.2.</span> <span class="nav-text">自治性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要好处"><span class="nav-number">2.2.</span> <span class="nav-text">主要好处</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#技术异构性"><span class="nav-number">2.2.1.</span> <span class="nav-text">技术异构性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#弹性"><span class="nav-number">2.2.2.</span> <span class="nav-text">弹性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扩展"><span class="nav-number">2.2.3.</span> <span class="nav-text">扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单部署"><span class="nav-number">2.2.4.</span> <span class="nav-text">简单部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与组织结构相匹配"><span class="nav-number">2.2.5.</span> <span class="nav-text">与组织结构相匹配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可组合性"><span class="nav-number">2.2.6.</span> <span class="nav-text">可组合性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对可替代性的优化"><span class="nav-number">2.2.7.</span> <span class="nav-text">对可替代性的优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向服务的架构"><span class="nav-number">2.3.</span> <span class="nav-text">面向服务的架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他分解技术"><span class="nav-number">2.4.</span> <span class="nav-text">其他分解技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#共享库"><span class="nav-number">2.4.1.</span> <span class="nav-text">共享库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块（-）"><span class="nav-number">2.4.2.</span> <span class="nav-text">模块（?）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#没有银弹"><span class="nav-number">2.5.</span> <span class="nav-text">没有银弹</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-演化式架构师"><span class="nav-number">3.</span> <span class="nav-text">第二章 演化式架构师</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不准确的比较"><span class="nav-number">3.1.</span> <span class="nav-text">不准确的比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#架构师的演化视角"><span class="nav-number">3.2.</span> <span class="nav-text">架构师的演化视角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分区"><span class="nav-number">3.3.</span> <span class="nav-text">分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一个原则性的方法"><span class="nav-number">3.4.</span> <span class="nav-text">一个原则性的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#战略目标"><span class="nav-number">3.4.1.</span> <span class="nav-text">战略目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原则"><span class="nav-number">3.4.2.</span> <span class="nav-text">原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实践"><span class="nav-number">3.4.3.</span> <span class="nav-text">实践</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将原则和实践相结合"><span class="nav-number">3.4.4.</span> <span class="nav-text">将原则和实践相结合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#真实世界的例子"><span class="nav-number">3.4.5.</span> <span class="nav-text">真实世界的例子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#要求的标准"><span class="nav-number">3.5.</span> <span class="nav-text">要求的标准</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#监控"><span class="nav-number">3.5.1.</span> <span class="nav-text">监控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">3.5.2.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#架构安全性"><span class="nav-number">3.5.3.</span> <span class="nav-text">架构安全性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码治理"><span class="nav-number">3.6.</span> <span class="nav-text">代码治理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#范例"><span class="nav-number">3.6.1.</span> <span class="nav-text">范例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#剪裁服务代码模板"><span class="nav-number">3.6.2.</span> <span class="nav-text">剪裁服务代码模板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术债务"><span class="nav-number">3.7.</span> <span class="nav-text">技术债务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例外管理"><span class="nav-number">3.8.</span> <span class="nav-text">例外管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集中治理和领导"><span class="nav-number">3.9.</span> <span class="nav-text">集中治理和领导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建设团队"><span class="nav-number">3.10.</span> <span class="nav-text">建设团队</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.11.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-如何构建服务"><span class="nav-number">4.</span> <span class="nav-text">第三章 如何构建服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-集成"><span class="nav-number">5.</span> <span class="nav-text">第四章 集成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-分解单块系统"><span class="nav-number">6.</span> <span class="nav-text">第五章 分解单块系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六章-部署"><span class="nav-number">7.</span> <span class="nav-text">第六章 部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第七章-测试"><span class="nav-number">8.</span> <span class="nav-text">第七章 测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-检控"><span class="nav-number">9.</span> <span class="nav-text">第八章 检控</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第九章-安全"><span class="nav-number">10.</span> <span class="nav-text">第九章 安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第十章-康威定律和系统设计"><span class="nav-number">11.</span> <span class="nav-text">第十章 康威定律和系统设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第十一章-规模化微服务"><span class="nav-number">12.</span> <span class="nav-text">第十一章 规模化微服务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第十二章-总结"><span class="nav-number">13.</span> <span class="nav-text">第十二章 总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#提到的书籍"><span class="nav-number">14.</span> <span class="nav-text">提到的书籍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#专业名词"><span class="nav-number">15.</span> <span class="nav-text">专业名词</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Frank Yuan</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.2.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
