@@ -142,7 +142,7 @@
 <meta property="og:site_name" content="Frank">
 <meta property="og:description" content="基本信息O’REILLY 图灵程序设计丛书中文名：Kafka权威指南Name: Kafka The Definitive Guide作者： Neha Narkhede Gwen Shapira Todd Palino翻译： 薛命灯ISBN: 978-7-115-47327-1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-25T14:36:51.560Z">
+<meta property="og:updated_time" content="2018-08-02T15:12:05.219Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kafka The Definitive Guide">
 <meta name="twitter:description" content="基本信息O’REILLY 图灵程序设计丛书中文名：Kafka权威指南Name: Kafka The Definitive Guide作者： Neha Narkhede Gwen Shapira Todd Palino翻译： 薛命灯ISBN: 978-7-115-47327-1">
@@ -376,12 +376,24 @@
                 
               
 
-              <time title="Created: 2018-07-25 22:30:07 / Modified: 22:36:51" itemprop="dateCreated datePublished" datetime="2018-07-25T22:30:07+08:00">2018-07-25</time>
+              <time title="Created: 2018-07-25 22:30:07" itemprop="dateCreated datePublished" datetime="2018-07-25T22:30:07+08:00">2018-07-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-08-02 23:12:05" itemprop="dateModified" datetime="2018-08-02T23:12:05+08:00">2018-08-02</time>
               
             
           </span>
@@ -422,9 +434,58 @@
       
 
       
-        <h1 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h1><p>O’REILLY 图灵程序设计丛书<br>中文名：Kafka权威指南<br>Name: Kafka The Definitive Guide<br>作者： Neha Narkhede Gwen Shapira Todd Palino<br>翻译： 薛命灯<br>ISBN: 978-7-115-47327-1</p>
+        <p><strong>基本信息</strong><br>O’REILLY 图灵程序设计丛书<br>中文名：Kafka权威指南<br>Name: Kafka The Definitive Guide<br>作者： Neha Narkhede Gwen Shapira Todd Palino<br>翻译： 薛命灯<br>ISBN: 978-7-115-47327-1</p>
 <a id="more"></a>
-<h1 id="第一章-初识Kafka"><a href="#第一章-初识Kafka" class="headerlink" title="第一章 初识Kafka"></a>第一章 初识Kafka</h1><h1 id="第二章-安装Kafka"><a href="#第二章-安装Kafka" class="headerlink" title="第二章 安装Kafka"></a>第二章 安装Kafka</h1><h1 id="第三章-Kafka生产者—向Kafka写入数据"><a href="#第三章-Kafka生产者—向Kafka写入数据" class="headerlink" title="第三章 Kafka生产者—向Kafka写入数据"></a>第三章 Kafka生产者—向Kafka写入数据</h1><h1 id="第四章-Kafka消费者—从Kafka读取数据"><a href="#第四章-Kafka消费者—从Kafka读取数据" class="headerlink" title="第四章 Kafka消费者—从Kafka读取数据"></a>第四章 Kafka消费者—从Kafka读取数据</h1><h1 id="第五章-深入Kafka"><a href="#第五章-深入Kafka" class="headerlink" title="第五章 深入Kafka"></a>第五章 深入Kafka</h1><h1 id="第六章-可靠的数据传递"><a href="#第六章-可靠的数据传递" class="headerlink" title="第六章 可靠的数据传递"></a>第六章 可靠的数据传递</h1><h1 id="第七章-构造数据管道"><a href="#第七章-构造数据管道" class="headerlink" title="第七章 构造数据管道"></a>第七章 构造数据管道</h1><h1 id="第八章-跨集群数据镜像"><a href="#第八章-跨集群数据镜像" class="headerlink" title="第八章 跨集群数据镜像"></a>第八章 跨集群数据镜像</h1><h1 id="第九章-管理Kafka"><a href="#第九章-管理Kafka" class="headerlink" title="第九章 管理Kafka"></a>第九章 管理Kafka</h1><h1 id="第十章-监控Kafka"><a href="#第十章-监控Kafka" class="headerlink" title="第十章 监控Kafka"></a>第十章 监控Kafka</h1><h1 id="第十一章-流式处理"><a href="#第十一章-流式处理" class="headerlink" title="第十一章 流式处理"></a>第十一章 流式处理</h1>
+<p><strong>序</strong><br>Kafka从何而来？<br>最初是LinkedIn的一个内部基础设施系统。<br>我们为什么要开发Kafka？<br>帮助处理持续数据流的组件。我们希望把数据看成是持续变化和不断增长的流，并基于这样的想法构建出一个数据系统，事实上是一个数据结构。<br>Kafka到底是什么？<br>在这个平台上可以发布和订阅数据流，并把他们保存起来、进行处理。</p>
+<p>Kafka vs. 消息队列 （RedditMQ, ActiveMQ, MQSeries）<br>相同点：允许发布和订阅消息流</p>
+<p>Kafka vs. Hadoop</p>
+<p>Kafka vs. ETL</p>
+<h1 id="第一章-初识Kafka"><a href="#第一章-初识Kafka" class="headerlink" title="第一章 初识Kafka"></a>第一章 初识Kafka</h1><h2 id="发布和订阅消息系统"><a href="#发布和订阅消息系统" class="headerlink" title="发布和订阅消息系统"></a>发布和订阅消息系统</h2><p>数据不会直接把数据发送给接受者，这是发布与订阅系统的一个特点。</p>
+<h2 id="Kafka登场"><a href="#Kafka登场" class="headerlink" title="Kafka登场"></a>Kafka登场</h2><p>分布式提交日志或者分布式流平台</p>
+<h3 id="消息和批次"><a href="#消息和批次" class="headerlink" title="消息和批次"></a>消息和批次</h3><p>Kafka的数据单元称为<strong>消息</strong>。<br>为了提高效率，消息被分批次写入Kafka。<strong>批次</strong>就是一组消息，这些消息输入<strong>同一个主题和分区</strong><br>批次大小需要在时间延迟和吞吐量之间做出权衡。</p>
+<h3 id="模式-（schema）"><a href="#模式-（schema）" class="headerlink" title="模式 （schema）"></a>模式 （schema）</h3><p>Apache Avro 序列化工具</p>
+<h3 id="主题和分区"><a href="#主题和分区" class="headerlink" title="主题和分区"></a>主题和分区</h3><p>消息通过主题进行分类。<br>同一个主题可以有很多个分区。<br>Kafka Streams, Apache Samza, Storm 流式处理。</p>
+<h3 id="生产者和消费者"><a href="#生产者和消费者" class="headerlink" title="生产者和消费者"></a>生产者和消费者</h3><p>生产者：创建消息，一个消息会被分配到一个特定的主题上。默认均匀的分配到不同的分区上，也可以指定。<br>消费者：读取消息。可以同时订阅多个主题，消费者会把最后读取的消息的offset保存在zookeeper上。<br>消费者群组：群组保证，<strong>每个分区只能被一个消费者使用</strong>。但是一个消费者可以读多个分区。</p>
+<h3 id="broker和集群"><a href="#broker和集群" class="headerlink" title="broker和集群"></a>broker和集群</h3><p>一个独立的kafka服务器被称为一个broker。<br>单个broker可以处理千个分区以及每秒百万级的消息量。<br>broker有master的概念，一个broker失效，其他的broker就可以通过选举的方式连接到新的首领。<br>保留消息：broker的重要特性，保留一段时间或者保留到消息达到多大。</p>
+<h3 id="多集群"><a href="#多集群" class="headerlink" title="多集群"></a>多集群</h3><p>MirrorMaker实现集群间的消息复制。</p>
+<h2 id="为什么选择Kafka"><a href="#为什么选择Kafka" class="headerlink" title="为什么选择Kafka"></a>为什么选择Kafka</h2><h3 id="多个生产者"><a href="#多个生产者" class="headerlink" title="多个生产者"></a>多个生产者</h3><h3 id="多个消费者"><a href="#多个消费者" class="headerlink" title="多个消费者"></a>多个消费者</h3><h3 id="基于磁盘的数据存储"><a href="#基于磁盘的数据存储" class="headerlink" title="基于磁盘的数据存储"></a>基于磁盘的数据存储</h3><p>数据会被保留在broker上一段时间，消费者可以离线一段时间，仍然能获得数据。</p>
+<h3 id="伸缩性"><a href="#伸缩性" class="headerlink" title="伸缩性"></a>伸缩性</h3><p>集群横向扩容</p>
+<h3 id="高性能"><a href="#高性能" class="headerlink" title="高性能"></a>高性能</h3><p>处理巨大的消息流，保证亚秒级别的消息延迟</p>
+<h2 id="数据生态系统"><a href="#数据生态系统" class="headerlink" title="数据生态系统"></a>数据生态系统</h2><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol>
+<li>活动跟踪</li>
+<li>传递消息</li>
+<li>度量指标和日志记录</li>
+<li>提交日志</li>
+<li>流处理</li>
+</ol>
+<h1 id="第二章-安装Kafka"><a href="#第二章-安装Kafka" class="headerlink" title="第二章 安装Kafka"></a>第二章 安装Kafka</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zookeeper</span></span><br><span class="line">bin/zookeeper-server-start.sh config/zookeeper.properties</span><br><span class="line"><span class="comment"># kafka-server</span></span><br><span class="line">bin/kafka-server-start.sh config/server.properties</span><br><span class="line"><span class="comment"># create topic</span></span><br><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic <span class="built_in">test</span></span><br><span class="line"><span class="comment"># list topics</span></span><br><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br><span class="line"><span class="comment"># consumer</span></span><br><span class="line">bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <span class="built_in">test</span> --from-beginning</span><br><span class="line"><span class="comment"># producer</span></span><br><span class="line">bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h2 id="broker-常规配置"><a href="#broker-常规配置" class="headerlink" title="broker 常规配置"></a>broker 常规配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># broker.id --&gt; broker 的标识符</span></span><br><span class="line">borker.id=0</span><br><span class="line"><span class="comment"># port 端口号 默认9092/connect</span></span><br><span class="line"><span class="comment"># zookeeper.connect 用于保存broker元数据的zookeeper地址和端口</span></span><br><span class="line">zookeeper.connect=localhost:2181</span><br><span class="line"><span class="comment"># log.dirs 消息保存在磁盘上的位置</span></span><br><span class="line">log.dirs=/tmp/kafka-logs</span><br><span class="line"><span class="comment"># num.recovery.threads.per.data.dir 每个log.dir需要几个线程来写</span></span><br><span class="line">num.recovery.threads.per.data.dir=1</span><br><span class="line"><span class="comment"># auto.create.topics.enable 消费者读，生产者写，任一客户端发送元数据请求时会创建</span></span><br><span class="line">auto.create.topics.enable=<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="Topic-的默认配置"><a href="#Topic-的默认配置" class="headerlink" title="Topic 的默认配置"></a>Topic 的默认配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># num.partitions=1 每个topic几个分区</span></span><br><span class="line"><span class="comment"># log.retention.ms 消息保存多久</span></span><br><span class="line"><span class="comment"># log.retention.hours=168</span></span><br><span class="line"><span class="comment"># log.retention.bytes 保存多大字节</span></span><br><span class="line"><span class="comment"># log.segment.bytes=1G 日志的片段大小，太小会频繁的关闭和创建新片段</span></span><br><span class="line"><span class="comment"># log.segment.ms 多长时间关闭日志片段</span></span><br><span class="line"><span class="comment"># message.max.bytes=1MB 每个消息最大多少</span></span><br></pre></td></tr></table></figure>
+<h1 id="第三章-Kafka生产者—向Kafka写入数据"><a href="#第三章-Kafka生产者—向Kafka写入数据" class="headerlink" title="第三章 Kafka生产者—向Kafka写入数据"></a>第三章 Kafka生产者—向Kafka写入数据</h1><h2 id="生产者概览"><a href="#生产者概览" class="headerlink" title="生产者概览"></a>生产者概览</h2><h2 id="创建生产者"><a href="#创建生产者" class="headerlink" title="创建生产者"></a>创建生产者</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bootstrap.servers</span><br><span class="line">key.serializer</span><br><span class="line">value.serializer</span><br></pre></td></tr></table></figure>
+<h2 id="发送消息到Kafka"><a href="#发送消息到Kafka" class="headerlink" title="发送消息到Kafka"></a>发送消息到Kafka</h2><h3 id="同步发"><a href="#同步发" class="headerlink" title="同步发"></a>同步发</h3><p>直接send（）</p>
+<h3 id="异步发"><a href="#异步发" class="headerlink" title="异步发"></a>异步发</h3><p>根据send（）之后返回的信息，可以使用一个回调函数。</p>
+<h2 id="生产者配置"><a href="#生产者配置" class="headerlink" title="生产者配置"></a>生产者配置</h2><ol>
+<li>acks <ol>
+<li>acks=0 写入不等返回结果 最快，丢失数据</li>
+<li>acks=1 master收到就行 </li>
+<li>acks=all 所有节点都收到才行 最慢，最安全</li>
+</ol>
+</li>
+<li>buffer.memory</li>
+<li>compression.type</li>
+<li>retries</li>
+<li>batch.size</li>
+<li>linger.ms 发送批次之前等是否有新的消息进来</li>
+<li>client.id 任一字符串，通过日志可以判断消息来源</li>
+<li>max.in.flight.requests.per.connection 在收到服务器响应之前可以发多少数据，占用更多内存，但是提升吞吐量。</li>
+<li>timeout.ms, request.timeout.ms, metadata.fetch.timeout.ms</li>
+<li>max.block.mx</li>
+<li>max.request.size</li>
+<li>receive.buffer.bytes, send.buffer.bytes</li>
+</ol>
+<h2 id="序列化器"><a href="#序列化器" class="headerlink" title="序列化器"></a>序列化器</h2><p>Apache Avro</p>
+<h2 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h2><p>可以自主选择分区，否则会使用Round Robin算法均匀分区</p>
+<h1 id="第四章-Kafka消费者—从Kafka读取数据"><a href="#第四章-Kafka消费者—从Kafka读取数据" class="headerlink" title="第四章 Kafka消费者—从Kafka读取数据"></a>第四章 Kafka消费者—从Kafka读取数据</h1><h1 id="第五章-深入Kafka"><a href="#第五章-深入Kafka" class="headerlink" title="第五章 深入Kafka"></a>第五章 深入Kafka</h1><h1 id="第六章-可靠的数据传递"><a href="#第六章-可靠的数据传递" class="headerlink" title="第六章 可靠的数据传递"></a>第六章 可靠的数据传递</h1><h1 id="第七章-构造数据管道"><a href="#第七章-构造数据管道" class="headerlink" title="第七章 构造数据管道"></a>第七章 构造数据管道</h1><h1 id="第八章-跨集群数据镜像"><a href="#第八章-跨集群数据镜像" class="headerlink" title="第八章 跨集群数据镜像"></a>第八章 跨集群数据镜像</h1><h1 id="第九章-管理Kafka"><a href="#第九章-管理Kafka" class="headerlink" title="第九章 管理Kafka"></a>第九章 管理Kafka</h1><h1 id="第十章-监控Kafka"><a href="#第十章-监控Kafka" class="headerlink" title="第十章 监控Kafka"></a>第十章 监控Kafka</h1><h1 id="第十一章-流式处理"><a href="#第十一章-流式处理" class="headerlink" title="第十一章 流式处理"></a>第十一章 流式处理</h1>
       
     </div>
 
@@ -466,6 +527,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/02/Redis-Developer-and-DevOp/" rel="prev" title="Redis开发和运维">
+                Redis开发和运维 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -543,7 +608,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -642,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本信息"><span class="nav-number">1.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-初识Kafka"><span class="nav-number">2.</span> <span class="nav-text">第一章 初识Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-安装Kafka"><span class="nav-number">3.</span> <span class="nav-text">第二章 安装Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-Kafka生产者—向Kafka写入数据"><span class="nav-number">4.</span> <span class="nav-text">第三章 Kafka生产者—向Kafka写入数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-Kafka消费者—从Kafka读取数据"><span class="nav-number">5.</span> <span class="nav-text">第四章 Kafka消费者—从Kafka读取数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-深入Kafka"><span class="nav-number">6.</span> <span class="nav-text">第五章 深入Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六章-可靠的数据传递"><span class="nav-number">7.</span> <span class="nav-text">第六章 可靠的数据传递</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第七章-构造数据管道"><span class="nav-number">8.</span> <span class="nav-text">第七章 构造数据管道</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-跨集群数据镜像"><span class="nav-number">9.</span> <span class="nav-text">第八章 跨集群数据镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第九章-管理Kafka"><span class="nav-number">10.</span> <span class="nav-text">第九章 管理Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第十章-监控Kafka"><span class="nav-number">11.</span> <span class="nav-text">第十章 监控Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第十一章-流式处理"><span class="nav-number">12.</span> <span class="nav-text">第十一章 流式处理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-初识Kafka"><span class="nav-number">1.</span> <span class="nav-text">第一章 初识Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#发布和订阅消息系统"><span class="nav-number">1.1.</span> <span class="nav-text">发布和订阅消息系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kafka登场"><span class="nav-number">1.2.</span> <span class="nav-text">Kafka登场</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#消息和批次"><span class="nav-number">1.2.1.</span> <span class="nav-text">消息和批次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式-（schema）"><span class="nav-number">1.2.2.</span> <span class="nav-text">模式 （schema）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题和分区"><span class="nav-number">1.2.3.</span> <span class="nav-text">主题和分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生产者和消费者"><span class="nav-number">1.2.4.</span> <span class="nav-text">生产者和消费者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#broker和集群"><span class="nav-number">1.2.5.</span> <span class="nav-text">broker和集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多集群"><span class="nav-number">1.2.6.</span> <span class="nav-text">多集群</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么选择Kafka"><span class="nav-number">1.3.</span> <span class="nav-text">为什么选择Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多个生产者"><span class="nav-number">1.3.1.</span> <span class="nav-text">多个生产者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个消费者"><span class="nav-number">1.3.2.</span> <span class="nav-text">多个消费者</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于磁盘的数据存储"><span class="nav-number">1.3.3.</span> <span class="nav-text">基于磁盘的数据存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伸缩性"><span class="nav-number">1.3.4.</span> <span class="nav-text">伸缩性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高性能"><span class="nav-number">1.3.5.</span> <span class="nav-text">高性能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据生态系统"><span class="nav-number">1.4.</span> <span class="nav-text">数据生态系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">1.4.1.</span> <span class="nav-text">使用场景</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-安装Kafka"><span class="nav-number">2.</span> <span class="nav-text">第二章 安装Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#broker-常规配置"><span class="nav-number">2.2.</span> <span class="nav-text">broker 常规配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Topic-的默认配置"><span class="nav-number">2.3.</span> <span class="nav-text">Topic 的默认配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-Kafka生产者—向Kafka写入数据"><span class="nav-number">3.</span> <span class="nav-text">第三章 Kafka生产者—向Kafka写入数据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生产者概览"><span class="nav-number">3.1.</span> <span class="nav-text">生产者概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建生产者"><span class="nav-number">3.2.</span> <span class="nav-text">创建生产者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发送消息到Kafka"><span class="nav-number">3.3.</span> <span class="nav-text">发送消息到Kafka</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#同步发"><span class="nav-number">3.3.1.</span> <span class="nav-text">同步发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步发"><span class="nav-number">3.3.2.</span> <span class="nav-text">异步发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生产者配置"><span class="nav-number">3.4.</span> <span class="nav-text">生产者配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化器"><span class="nav-number">3.5.</span> <span class="nav-text">序列化器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分区"><span class="nav-number">3.6.</span> <span class="nav-text">分区</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-Kafka消费者—从Kafka读取数据"><span class="nav-number">4.</span> <span class="nav-text">第四章 Kafka消费者—从Kafka读取数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-深入Kafka"><span class="nav-number">5.</span> <span class="nav-text">第五章 深入Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第六章-可靠的数据传递"><span class="nav-number">6.</span> <span class="nav-text">第六章 可靠的数据传递</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第七章-构造数据管道"><span class="nav-number">7.</span> <span class="nav-text">第七章 构造数据管道</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第八章-跨集群数据镜像"><span class="nav-number">8.</span> <span class="nav-text">第八章 跨集群数据镜像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第九章-管理Kafka"><span class="nav-number">9.</span> <span class="nav-text">第九章 管理Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第十章-监控Kafka"><span class="nav-number">10.</span> <span class="nav-text">第十章 监控Kafka</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第十一章-流式处理"><span class="nav-number">11.</span> <span class="nav-text">第十一章 流式处理</span></a></li></ol></div>
             
 
           </div>
