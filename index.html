@@ -8,11 +8,11 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="">
-<head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -26,8 +26,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -82,9 +82,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
@@ -151,7 +151,7 @@
 
 
 
-  <link rel="canonical" href="http://yufengyuanx.github.io/"/>
+  <link rel="canonical" href="http://yufengyuanx.github.io/">
 
 
 
@@ -251,7 +251,7 @@
           
           <li class="menu-item menu-item-home menu-item-active">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
   </li>
         
         
@@ -259,7 +259,7 @@
           
           <li class="menu-item menu-item-about">
     <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
   </li>
         
         
@@ -267,7 +267,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
   </li>
         
         
@@ -275,7 +275,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
   </li>
         
         
@@ -283,7 +283,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
   </li>
 
       
@@ -334,11 +334,702 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2019/07/12/Git-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Yuan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/12/Git-1/" itemprop="url">
+                  Git常用命令之Git Stash
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-07-12 23:58:11" itemprop="dateCreated datePublished" datetime="2019-07-12T23:58:11+08:00">2019-07-12</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-13 01:07:51" itemprop="dateModified" datetime="2019-07-13T01:07:51+08:00">2019-07-13</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h1><p>工作中经常会遇到这样一个情况，正在好好的开发一个feature， 突然测试跑过来主分支上有一个bug，你帮忙看一下，这个时候我已经开发了一半，如果不commit就没法切换分支，如果commit，那又会污染一次commit， commit了一些没意义的内容，比如update, unfinish等等。</p>
+<p>当我还是一个弱鸡的时候，流程大概是这样的</p>
+<p>我正在做一个超级厉害的项目，已经开发了接近50%，下面是项目的核心代码（价值一个亿）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> ~/Desktop/demo/gitstash  feature ●  cat demo.txt</span><br><span class="line">I will count from a to z</span><br><span class="line">a b c d e f g h i j k l m n</span><br></pre></td></tr></table></figure></p>
+<p>这个时候测试小姐姐突然跑过来说上次让我写的从1数到100的小程序有bug，中间少了66,客户非常不满意，需要立刻马上修复，所以我做了以下操作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git commit -am <span class="string">"unfinish, to be continue"</span></span><br><span class="line">git checkout develop</span><br><span class="line">vim count.txt</span><br><span class="line">...............修改核心代码bug，内容保密</span><br><span class="line">git commit -am <span class="string">"fix: fix count.txt add 66"</span></span><br><span class="line">git checkout feature</span><br><span class="line">...............继续写我的核心代码</span><br></pre></td></tr></table></figure>
+<p>然后我写完之后，再commit,这个时候我就多了一次commit,明明只是一个任务，却又两个commit，且第一个commit毫无意义，让后面的人摸不到头脑。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">commit 3f0c1870a0584102a58f7845fb712c0c819c8e26 (HEAD -&gt; feature)</span><br><span class="line">Date:   Sat Jul 13 00:22:11 2019 +0800</span><br><span class="line"></span><br><span class="line">    finish project alphabet</span><br><span class="line"></span><br><span class="line">commit ed7aef3c22fce686b7de46790acf5bf991cc0d44</span><br><span class="line">Date:   Sat Jul 13 00:20:10 2019 +0800</span><br><span class="line"></span><br><span class="line">    unfinish, to be continue</span><br></pre></td></tr></table></figure>
+<p>作为强迫症的根本就忍不了，明明就是一个需求，搞两次commit好难受。。。于是我认真学习了一下 <code>git stash</code> 这个命令</p>
+<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p><code>git stash</code> 这个命令能够将所有未提交的修改（工作区和暂存区）保存至堆栈中，用于后续恢复当前工作目录。</p>
+<ol>
+<li><p><code>git stash</code></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> ~/Desktop/demo/gitstash feature git stash</span><br><span class="line">Saved working directory and index state WIP on master: 3f0c187 finish project alphabet</span><br></pre></td></tr></table></figure>
+<p> 保存当前的工作目录，将index指向了master分支的</p>
+<p> WIP(Working in Progress)</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git stash list</span><br><span class="line">stash@&#123;0&#125;: WIP on master: 3f0c187 finish project alphabet</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>git stash save</code> 推荐</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> ~/Desktop/demo/gitstash git stash save <span class="string">"feature a unfinish"</span></span><br><span class="line">Saved working directory and index state On master: feature a unfishi</span><br></pre></td></tr></table></figure>
+<p> 给stash增加一个message</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git stash list</span><br><span class="line">stash@&#123;0&#125;: On master: feature a unfishi</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>git stash list</code></p>
+<p> 查看当前stash中的内容</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stash@&#123;0&#125;: On master: second stash</span><br><span class="line">stash@&#123;1&#125;: On master: feature a unfishi</span><br></pre></td></tr></table></figure>
+<p> 从上面的结果可以看出来，<code>git stash</code> 实际上是用了一个stack, FILO</p>
+</li>
+<li><p><code>git stash pop</code> </p>
+<p> 既然是一个stack，那么<code>git stash pop</code>命令就比较好理解了，就是把栈顶的pop出来，如果对stack这种数据结构比较了解，应该知道pop其实会删除栈顶的元素，所以再用git stash list查看的时候最上面的一条记录就会消失了。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git stash pop</span><br><span class="line">git stash list</span><br><span class="line">stash@&#123;0&#125;: On master: feature a unfinish</span><br></pre></td></tr></table></figure>
+<p> 注意如果当前目录的内容发生了改变，并且修改了同一行数据，会报错，需要解决冲突。</p>
+</li>
+<li><p><code>git stash apply</code></p>
+<p> 这个和pop的区别是不会把栈顶的记录删掉，是个多个分支开发。</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git stash apply</span><br><span class="line">git stash list</span><br><span class="line">stash@&#123;0&#125;: On master: feature a unfinish</span><br></pre></td></tr></table></figure>
+<p> 可以使用<code>git stash apply</code> + stash名字（如stash@{1}）指定恢复哪个stash到当前的工作目录。</p>
+</li>
+<li><p><code>git stash drop + name</code><br> 从堆栈中移除某个指定的stash</p>
+</li>
+<li><code>git stash clear</code><br> 清除堆栈中的所有 内容</li>
+<li><p><code>git stash show</code><br> 查看堆栈中最新保存的stash和当前目录的差异。<br> <code>git stash show stash@{1}</code> 查看指定的stash和当前目录差异。<br> 通过 <code>git stash show -p</code> 查看详细的不同：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">git stash show</span><br><span class="line">demo.txt | 2 ++</span><br><span class="line">1 file changed, 2 insertions(+)</span><br><span class="line"></span><br><span class="line">git stash show -p</span><br><span class="line">demo.txt | 2 ++</span><br><span class="line">1 file changed, 2 insertions(+)</span><br><span class="line">diff --git a/demo.txt b/demo.txt</span><br><span class="line">index 3c9498c..d939307 100644</span><br><span class="line">--- a/demo.txt</span><br><span class="line">+++ b/demo.txt</span><br><span class="line">@@ -1,2 +1,4 @@</span><br><span class="line">I will count from a to z</span><br><span class="line">a b c d e f g h i j k l m n o p q r s t u v w x y z</span><br><span class="line">+</span><br><span class="line">+alalala</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>git stash branch</code><br> 从最新的stash创建分支。<br> 应用场景：当储藏了部分工作，暂时不去理会，继续在当前分支进行开发，后续想将stash中的内容恢复到当前工作目录时，如果是针对同一个文件的修改（即便不是同行数据），那么可能会发生冲突，恢复失败，这里通过创建新的分支来解决。可以用于解决stash中的内容和当前目录的内容发生冲突的情景。<br> 发生冲突时，需手动解决冲突。</p>
+</li>
+</ol>
+<p>好了，学了这个命令，从此可以愉快的配合测试小姐姐修(xie)bug了。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>在写项目的过程中尽量不要随意的写commit,经常在项目的<code>git log</code>记录中找到大量的毫无意义的commit信息，比如 update, aaaaa, fix bug等，尽量规范开发流程，认真思考，减少无意义的commit信息，避免污染提交日志。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/08/18/WebSocket/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Yuan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/18/WebSocket/" itemprop="url">
+                  WebSocket
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-18 15:10:50" itemprop="dateCreated datePublished" datetime="2018-08-18T15:10:50+08:00">2018-08-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-07-12 23:42:40" itemprop="dateModified" datetime="2019-07-12T23:42:40+08:00">2019-07-12</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Why-we-need-WebSocket"><a href="#Why-we-need-WebSocket" class="headerlink" title="Why we need WebSocket"></a>Why we need WebSocket</h1><p>Http最大的缺陷就是所有请求只能由客户端发起。<br>如果服务器有连续的状态变化，客户端要获得就比较麻烦。 典型的办法就是<strong>轮询</strong>.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/18/WebSocket/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </p></div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/08/07/swagger2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Yuan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/07/swagger2/" itemprop="url">
+                  swagger2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-07 23:20:57" itemprop="dateCreated datePublished" datetime="2018-08-07T23:20:57+08:00">2018-08-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-08-10 00:01:03" itemprop="dateModified" datetime="2018-08-10T00:01:03+08:00">2018-08-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Swagger2"><a href="#Swagger2" class="headerlink" title="Swagger2"></a>Swagger2</h1><h2 id="pom"><a href="#pom" class="headerlink" title="pom"></a>pom</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/07/swagger2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/08/06/Restful-api/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Yuan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/06/Restful-api/" itemprop="url">
+                  Restful-api
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-08-06 00:32:36" itemprop="dateCreated datePublished" datetime="2018-08-06T00:32:36+08:00">2018-08-06</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-08-10 00:01:48" itemprop="dateModified" datetime="2018-08-10T00:01:48+08:00">2018-08-10</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h1><p>API与用户的通信协议，总是使用HTTPs协议</p>
+<h1 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h1><pre><code>https://example.org/api/
+</code></pre><h1 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h1><pre><code>https://example.org/v1/
+</code></pre><h1 id="路径（Endpoint）"><a href="#路径（Endpoint）" class="headerlink" title="路径（Endpoint）"></a>路径（Endpoint）</h1><p>在RESTful架构中，每个网址代表一种资源(resource)，所有网址中不能有动词，只能有名词，而且所用的名词往往与数据库的表格名对应。</p>
+<pre><code>https://api.example.com/v1/zoos
+https://api.example.com/v1/animals
+https://api.example.com/v1/employees
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/06/Restful-api/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/08/02/Redis-Developer-and-DevOp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
@@ -397,7 +1088,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-03 01:16:31" itemprop="dateModified" datetime="2018-08-03T01:16:31+08:00">2018-08-03</time>
+                <time title="Modified: 2018-08-05 01:50:11" itemprop="dateModified" datetime="2018-08-05T01:50:11+08:00">2018-08-05</time>
               
             
           </span>
@@ -475,1584 +1166,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/07/25/Kafka-The-Definitive-Guide/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/25/Kafka-The-Definitive-Guide/" itemprop="url">
-                  Kafka The Definitive Guide
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-25 22:30:07" itemprop="dateCreated datePublished" datetime="2018-07-25T22:30:07+08:00">2018-07-25</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-08-02 23:12:05" itemprop="dateModified" datetime="2018-08-02T23:12:05+08:00">2018-08-02</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>基本信息</strong><br>O’REILLY 图灵程序设计丛书<br>中文名：Kafka权威指南<br>Name: Kafka The Definitive Guide<br>作者： Neha Narkhede Gwen Shapira Todd Palino<br>翻译： 薛命灯<br>ISBN: 978-7-115-47327-1</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/25/Kafka-The-Definitive-Guide/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/07/24/DruidDataSource/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/24/DruidDataSource/" itemprop="url">
-                  DruidDataSource
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-24 22:42:05 / Modified: 23:11:33" itemprop="dateCreated datePublished" datetime="2018-07-24T22:42:05+08:00">2018-07-24</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="JAVA-数据库连接池种类"><a href="#JAVA-数据库连接池种类" class="headerlink" title="JAVA 数据库连接池种类"></a>JAVA 数据库连接池种类</h2><ol>
-<li>C3P0</li>
-<li>DBCP （Database Connection Pool）</li>
-<li>PROXOOL</li>
-<li>Druid</li>
-</ol>
-<h2 id="Druid-Maven-Dependency"><a href="#Druid-Maven-Dependency" class="headerlink" title="Druid Maven Dependency"></a>Druid Maven Dependency</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="重要配置"><a href="#重要配置" class="headerlink" title="重要配置"></a>重要配置</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>配置</th>
-<th>默认值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>基本配置</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>name</td>
-<td>System.identityHashCode(this)</td>
-<td>配置这个属性的意义在于，如果存在多个数据源，监控的时候可以通过名字来区分开来。如果没有配置，将会生成一个名字，格式是：”DataSource-“ + System.identityHashCode(this)</td>
-</tr>
-<tr>
-<td>jdbcUrl</td>
-<td></td>
-<td>连接数据库的url，不同数据库不一样</td>
-</tr>
-<tr>
-<td>username</td>
-<td></td>
-<td>连接数据库的用户名</td>
-</tr>
-<tr>
-<td>password</td>
-<td></td>
-<td>连接数据库的密码。如果你不希望密码直接写在配置文件中，可以使用ConfigFilter。</td>
-</tr>
-<tr>
-<td>driverClassName</td>
-<td>根据url自动识别</td>
-<td>这一项可配可不配，如果不配置druid会根据url自动识别dbType，然后选择相应的driverClassName(建议配置下)</td>
-</tr>
-<tr>
-<td>连接池参数配置</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>initalSize</strong></td>
-<td>0</td>
-<td>初始化时建立物理连接的个数。初始化发生在显示调用init方法，或者第一次getConnection时</td>
-</tr>
-<tr>
-<td><strong>maxActive</strong></td>
-<td>8</td>
-<td>最大连接池数量</td>
-</tr>
-<tr>
-<td>maxIdle</td>
-<td>8</td>
-<td>已经不再使用，配置了也没效果</td>
-</tr>
-<tr>
-<td>maxActive</td>
-<td>8</td>
-<td>最大连接池数量</td>
-</tr>
-<tr>
-<td>minIdle</td>
-<td></td>
-<td>最小连接池数量</td>
-</tr>
-<tr>
-<td>maxWait</td>
-<td></td>
-<td>获取连接时最大等待时间，单位毫秒。配置了maxWait之后，缺省启用公平锁，并发效率会有所下降，如果需要可以通过配置useUnfairLock属性为true使用非公平锁。</td>
-</tr>
-<tr>
-<td>poolPreparedStatements</td>
-<td>false</td>
-<td>是否缓存preparedStatement，也就是PSCache。PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭。</td>
-</tr>
-<tr>
-<td>maxOpenPreparedStatements</td>
-<td>-1</td>
-<td>要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。在Druid中，不会存在Oracle下PSCache占用内存过多的问题，可以把这个数值配置大一些，比如说100</td>
-</tr>
-<tr>
-<td><strong>validationQuery</strong></td>
-<td></td>
-<td>用来检测连接是否有效的sql，要求是一个查询语句。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会其作用。一般用 SELECT 1</td>
-</tr>
-<tr>
-<td>testOnBorrow</td>
-<td>true</td>
-<td>申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能。</td>
-</tr>
-<tr>
-<td>testOnReturn</td>
-<td>false</td>
-<td>归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能</td>
-</tr>
-<tr>
-<td>testWhileIdle</td>
-<td>false</td>
-<td>建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。</td>
-</tr>
-<tr>
-<td>timeBetweenEvictionRunsMillis</td>
-<td></td>
-<td>有两个含义： 1) Destroy线程会检测连接的间隔时间. 2)testWhileIdle的判断依据，详细看testWhileIdle属性的说明  配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位毫秒</td>
-</tr>
-<tr>
-<td>numTestsPerEvictionRun</td>
-<td></td>
-<td>不再使用，一个DruidDataSource只支持一个EvictionRun minEvictableIdleTimeMillis</td>
-</tr>
-<tr>
-<td>connectionInitSqls</td>
-<td></td>
-<td>物理连接初始化的时候执行的sql</td>
-</tr>
-<tr>
-<td>exceptionSorter</td>
-<td>根据dbType自动识别</td>
-<td>当数据库抛出一些不可恢复的异常时，抛弃连接</td>
-</tr>
-<tr>
-<td>filters</td>
-<td></td>
-<td>属性类型是字符串，通过别名的方式配置扩展插件，常用的插件有： 监控统计用的filter:stat日志用的filter:log4j防御sql注入的filter:wall</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/07/23/Building-Micronservices/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/23/Building-Micronservices/" itemprop="url">
-                  Building Micronservices
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-23 00:43:20" itemprop="dateCreated datePublished" datetime="2018-07-23T00:43:20+08:00">2018-07-23</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-08-02 23:10:59" itemprop="dateModified" datetime="2018-08-02T23:10:59+08:00">2018-08-02</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>基本信息</strong><br>O’REILLY 图灵程序设计丛书<br>中文名：微服务设计<br>Name: Building Mecronservices<br>作者： Sam Newman<br>翻译： 崔立强，张俊<br>ISBN: 978-7-115-42026-8</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/23/Building-Micronservices/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/07/22/Git-Learn-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/22/Git-Learn-2/" itemprop="url">
-                  Git-Learn-2
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-22 22:21:39 / Modified: 23:31:00" itemprop="dateCreated datePublished" datetime="2018-07-22T22:21:39+08:00">2018-07-22</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>为了不给GitHub带来困扰，这货怎么又新建了一个Test Repository<br>我决定自己改一个GitLab玩</p>
-<ol>
-<li><p>docker  创建GitLab环境，省略</p>
-</li>
-<li><p>在GitLab上创建一个新的Reporsitory， 项目名称为git-learn-test </p>
-</li>
-<li><p>clone到本地</p>
-</li>
-</ol>
-<p>目前的状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">remote:</span><br><span class="line">	origin:</span><br><span class="line">		master</span><br><span class="line"><span class="built_in">local</span>:</span><br><span class="line">	master</span><br></pre></td></tr></table></figure>
-<p>在本地创建了一个新的文件test_file.txt<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim test_file.txt</span><br><span class="line">This is a <span class="built_in">test</span> file, and tested from <span class="built_in">local</span>.</span><br></pre></td></tr></table></figure></p>
-<p>民工二连</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">"local add a new file"</span></span><br><span class="line"></span><br><span class="line">[master (root-commit) fb522ec] <span class="built_in">local</span> add a new file</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 test_file.txt</span><br></pre></td></tr></table></figure>
-<p>目前的状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init</span><br><span class="line"><span class="built_in">local</span>:  init  --&gt; fb522ec</span><br></pre></td></tr></table></figure>
-<p>现在本地比远程仓库多了一个commit，那现在就可以提交给远程了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br><span class="line"></span><br><span class="line">Counting objects: 3, <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (3/3), 263 bytes | 263.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">Total 3 (delta 0), reused 0 (delta 0)</span><br><span class="line">To http://localhost/FrankeyYuan/git-learn-test.git</span><br><span class="line"> * [new branch]      master -&gt; master</span><br></pre></td></tr></table></figure>
-<p>此时再打开GitLab网站看，就发现已经更新了，所以现在的状态应该是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init --&gt; fb522ec</span><br><span class="line">local:  init --&gt; fb522ec</span><br></pre></td></tr></table></figure>
-<p>现在假设另一个人小B也在维护这个系统。（为了方便，不再下载一遍了，直接在gitlab上改）</p>
-<p>修改 test_file.txt文件为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This is a test file, and tested from local.</span><br><span class="line"></span><br><span class="line">Added by xiao-A via gitLab.</span><br></pre></td></tr></table></figure></p>
-<p>commit message: 2. Added by xiao-A via gitLab.<br>commit id: 6ab5a9b8</p>
-<p>现在的状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8</span><br><span class="line">local:  init --&gt; fb522ec</span><br></pre></td></tr></table></figure></p>
-<p>那本地现在怎么办呢？</p>
-<p>一种一种情况测试一下</p>
-<ol>
-<li>本地什么都没动, 直接git pull<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">remote: Counting objects: 3, <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (2/2), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 3 (delta 0), reused 0 (delta 0)</span><br><span class="line">Unpacking objects: 100% (3/3), <span class="keyword">done</span>.</span><br><span class="line">From http://localhost/FrankeyYuan/git-learn-test</span><br><span class="line">   fb522ec..6ab5a9b  master     -&gt; origin/master</span><br><span class="line">Updating fb522ec..6ab5a9b</span><br><span class="line">Fast-forward</span><br><span class="line"> test_file.txt | 2 ++</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"></span><br><span class="line">glog</span><br><span class="line">* 6ab5a9b (HEAD -&gt; master, origin/master) 2. Added by xiao-A via gitLab.</span><br><span class="line">* fb522ec <span class="built_in">local</span> add a new file</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8</span><br></pre></td></tr></table></figure>
-<ol>
-<li>本地修改了，但是互相有影响，需要解决冲突<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard head^</span><br><span class="line">This is a test file, and tested from local. Added by local, local 2nd commit.</span><br><span class="line"></span><br><span class="line">git pull</span><br><span class="line">Updating fb522ec..6ab5a9b</span><br><span class="line">error: Your local changes to the following files would be overwritten by merge:</span><br><span class="line">	test_file.txt</span><br><span class="line">Please commit your changes or stash them before you merge.</span><br><span class="line">Aborting</span><br><span class="line"></span><br><span class="line">git commit -am &quot;Added by local, local 2nd commit.&quot;</span><br><span class="line">[master b9c26af] Added by local, local 2nd commit.</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line"></span><br><span class="line"> glog</span><br><span class="line"></span><br><span class="line">* b9c26af (HEAD -&gt; master) Added by local, local 2nd commit.</span><br><span class="line">* fb522ec local add a new file</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8</span><br><span class="line">local:  init --&gt; fb522ec                --&gt; b9c26af</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">Auto-merging test_file.txt</span><br><span class="line">CONFLICT (content): Merge conflict in test_file.txt</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">2 This is a test file, and tested from local. Added by local, local 2nd commit.</span><br><span class="line">3 =======</span><br><span class="line">4 This is a test file, and tested from local.</span><br><span class="line">5</span><br><span class="line">6 Added by xiao-A via gitLab.</span><br><span class="line">7 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 6ab5a9b82eb3844444a2549072e132e3c6111c59</span><br></pre></td></tr></table></figure>
-<p>把文件修改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This is a test file, and tested from local. Added by local, local 2nd commit.</span><br><span class="line"></span><br><span class="line">Added by xiao-A via gitLab.</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">git commit -am &quot;fix conflict&quot;</span><br><span class="line"></span><br><span class="line">glog</span><br><span class="line"></span><br><span class="line">*   22c7b57 (HEAD -&gt; master) fix conflict</span><br><span class="line">|\</span><br><span class="line">| * 6ab5a9b (origin/master) 2. Added by xiao-A via gitLab.</span><br><span class="line">* | b9c26af Added by local, local 2nd commit.</span><br><span class="line">|/</span><br><span class="line">* fb522ec local add a new file</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git log</span><br><span class="line"></span><br><span class="line">commit 22c7b57c45bba10e514f547234212bfd7ac3db48 (HEAD -&gt; master)</span><br><span class="line">Merge: b9c26af 6ab5a9b</span><br><span class="line">Author: Yufeng Yuan &lt;yufengyuanx@gmail.com&gt;</span><br><span class="line">Date:   Sun Jul 22 22:56:12 2018 +0800</span><br><span class="line"></span><br><span class="line">    fix conflict</span><br><span class="line"></span><br><span class="line">commit b9c26af15bad4fdc465d87a42e389d82feff4aec</span><br><span class="line">Author: Yufeng Yuan &lt;yufengyuanx@gmail.com&gt;</span><br><span class="line">Date:   Sun Jul 22 22:52:02 2018 +0800</span><br><span class="line"></span><br><span class="line">    Added by local, local 2nd commit.</span><br><span class="line"></span><br><span class="line">commit 6ab5a9b82eb3844444a2549072e132e3c6111c59 (origin/master)</span><br><span class="line">Author: Frank Yuan &lt;yufeng_yuan@student.uml.edu&gt;</span><br><span class="line">Date:   Sun Jul 22 14:40:48 2018 +0000</span><br><span class="line"></span><br><span class="line">    2. Added by xiao-A via gitLab.</span><br><span class="line"></span><br><span class="line">commit fb522ec594e3226519204f64c5ace242792b1dc8</span><br><span class="line">Author: Yufeng Yuan &lt;yufengyuanx@gmail.com&gt;</span><br><span class="line">Date:   Sun Jul 22 22:28:42 2018 +0800</span><br><span class="line"></span><br><span class="line">    local add a new file</span><br><span class="line"></span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57</span><br></pre></td></tr></table></figure>
-<ol>
-<li>本地修改了，但是互相之间没有影响</li>
-</ol>
-<p>继续修改gitlab</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This is a test file, and tested from local. Added by local, local 2nd commit.</span><br><span class="line"></span><br><span class="line">Added by xiao-A via gitLab.</span><br><span class="line"></span><br><span class="line">Added by xiao-A via gitLab, 2nd commit from gitlab.</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">commit message: 2nd commit from gitlab</span><br><span class="line">commit id: 5d3af3e9</span><br><span class="line"></span><br><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57</span><br></pre></td></tr></table></figure>
-<p>本地创建新文件 test_file2.txt<br>Added by local, new file, filename: test_file2.txt</p>
-<p>民工二连</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -am &quot;Added by local, new file, filename: test_file2.txt&quot;</span><br><span class="line"></span><br><span class="line">[master c79c882] Added by local, new file, filename: test_file2.txt</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"> create mode 100644 test_file2.txt</span><br></pre></td></tr></table></figure>
-<p>这个时候pull会怎么样呢？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Compressing objects: 100% (2/2), done.</span><br><span class="line">remote: Total 3 (delta 1), reused 0 (delta 0)</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From http://localhost/FrankeyYuan/git-learn-test</span><br><span class="line">   22c7b57..5d3af3e  master     -&gt; origin/master</span><br><span class="line">Merge made by the &apos;recursive&apos; strategy.</span><br><span class="line"> test_file.txt | 2 ++</span><br><span class="line"> 1 file changed, 2 insertions(+)</span><br><span class="line"></span><br><span class="line"> glog</span><br><span class="line"></span><br><span class="line"> *   6fab655 (HEAD -&gt; master) Merge branch &apos;master&apos; of http://localhost/FrankeyYuan/git-learn-test</span><br><span class="line">|\</span><br><span class="line">| * 5d3af3e (origin/master) 2nd commit from gitlab</span><br><span class="line">* | c79c882 Added by local, new file, filename: test_file2.txt</span><br><span class="line">|/</span><br><span class="line">*   22c7b57 fix conflict</span><br><span class="line">|\</span><br><span class="line">| * 6ab5a9b 2. Added by xiao-A via gitLab.</span><br><span class="line">* | b9c26af Added by local, local 2nd commit.</span><br><span class="line">|/</span><br><span class="line">* fb522ec local add a new file</span><br><span class="line"></span><br><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9 --&gt; c79c882 --&gt; 6fab655</span><br><span class="line"></span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line">remote: init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9 --&gt; c79c882 --&gt; 6fab655</span><br><span class="line">local:  init --&gt; fb522ec --&gt; 6ab5a9b8 --&gt; b9c26af --&gt; 22c7b57 --&gt; 5d3af3e9 --&gt; c79c882 --&gt; 6fab655</span><br></pre></td></tr></table></figure>
-<p>经过测试，如果本地什么都没有动，直接pull，没问题<br>如果本地修改过了，需要先commit<br>如果commit之后pull有冲突，需要先fix conflict再commit<br>如果commit之后pull没有冲突，需要为这次merge创建一个新的commit</p>
-<p>TODO: git fetch<br>TODO: git stash<br>TODO: git reset/checkout<br>TODO: git commit —amend<br>TODO: git tag<br>TODO: git alias</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/07/12/python-path/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/12/python-path/" itemprop="url">
-                  python-path
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-07-12 00:40:43" itemprop="dateCreated datePublished" datetime="2018-07-12T00:40:43+08:00">2018-07-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-22 22:30:14" itemprop="dateModified" datetime="2018-07-22T22:30:14+08:00">2018-07-22</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>自从安装了python，开始用着爽，后面就被python的各种版本各种path搞得烦死了。<br>显示系统默认的python, python3<br>之后是升级后的新版本<br>再后来又下载了两个版本的Anaconda<br>然后就出现了根本就不知道自己有多少个版本的python<br>向善都不知道删什么。</p>
-<p>在terminal里输入python, python2, python3到底运行了那个版本</p>
-<p>找了一个虚拟机，新安装了ubuntu16.04,不升级，不安装任何东西，直接撸</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/12/python-path/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/06/25/Git-Learn-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/25/Git-Learn-1/" itemprop="url">
-                  Git-Learn-1
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-06-25 22:52:15" itemprop="dateCreated datePublished" datetime="2018-06-25T22:52:15+08:00">2018-06-25</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-23 23:40:59" itemprop="dateModified" datetime="2018-07-23T23:40:59+08:00">2018-07-23</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Personal"><a href="#Personal" class="headerlink" title="Personal"></a>Personal</h1><h2 id="Local"><a href="#Local" class="headerlink" title="Local"></a>Local</h2><h3 id="Single-Branch-Master-Only"><a href="#Single-Branch-Master-Only" class="headerlink" title="Single Branch (Master Only)"></a>Single Branch (Master Only)</h3><p>首先先创建一个空的文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir learn-1</span><br></pre></td></tr></table></figure>
-<p>现在发生了什么呢？啥也没发生，就是创建了一个空的文件夹而已。<br>那么如何才能让git帮助我们管理我们的文件、文档、代码呢？</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> learn-1</span><br><span class="line">git init</span><br></pre></td></tr></table></figure>
-<p>git init 这个指令是什么意思呢？就是让git来托管当前这一整个文件。</p>
-<p>我们可以仔细看一下，打完这个指令之后发生了什么。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ls -a </span><br><span class="line"></span><br><span class="line">.</span><br><span class="line">..</span><br><span class="line">.git</span><br></pre></td></tr></table></figure>
-<p>多了一个.git的文件夹</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/25/Git-Learn-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/06/04/Date-In-MySql/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/04/Date-In-MySql/" itemprop="url">
-                  Date In MySql
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-06-04 22:27:03" itemprop="dateCreated datePublished" datetime="2018-06-04T22:27:03+08:00">2018-06-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-22 00:56:16" itemprop="dateModified" datetime="2018-07-22T00:56:16+08:00">2018-07-22</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Type"><a href="#Type" class="headerlink" title="Type"></a>Type</h2><h3 id="Datetime"><a href="#Datetime" class="headerlink" title="Datetime"></a>Datetime</h3><p><strong>size</strong>: 8 Bytes<br><strong>range</strong>: 1000-01-01 00:00:00  — 9999-12-31 23:59:59</p>
-<h3 id="Date"><a href="#Date" class="headerlink" title="Date"></a>Date</h3><p><strong>size</strong>: 3 Bytes<br><strong>range</strong>: 1000-01-01 — 9999-12-31</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/04/Date-In-MySql/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/05/09/lombok/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/09/lombok/" itemprop="url">
-                  lombok
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-05-09 23:03:41" itemprop="dateCreated datePublished" datetime="2018-05-09T23:03:41+08:00">2018-05-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-22 00:55:14" itemprop="dateModified" datetime="2018-07-22T00:55:14+08:00">2018-07-22</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> String username;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">------------------------------------------</span><br><span class="line"># After Decompile</span><br><span class="line">------------------------------------------</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> java.lang.String username;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(java.lang.String roleName, <span class="keyword">int</span> priviledge)</span> </span>&#123; <span class="comment">/* compiled code */</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/09/lombok/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2018/05/06/spring-boot-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Frank Yuan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/06/spring-boot-1/" itemprop="url">
-                  Spring-Boot 1
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-05-06 16:11:01" itemprop="dateCreated datePublished" datetime="2018-05-06T16:11:01+08:00">2018-05-06</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-07-22 00:58:02" itemprop="dateModified" datetime="2018-07-22T00:58:02+08:00">2018-07-22</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</span><br><span class="line">  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><br><span class="line">  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</span><br><span class="line">  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line"></span><br><span class="line">  &lt;groupId&gt;com.example&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;logdemo&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</span><br><span class="line">  &lt;packaging&gt;jar&lt;/packaging&gt;</span><br><span class="line"></span><br><span class="line">  &lt;name&gt;logdemo&lt;/name&gt;</span><br><span class="line">  &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;</span><br><span class="line"></span><br><span class="line">  &lt;parent&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.0.1.RELEASE&lt;/version&gt;</span><br><span class="line">    &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;</span><br><span class="line">  &lt;/parent&gt;</span><br><span class="line"></span><br><span class="line">  &lt;properties&gt;</span><br><span class="line">    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">    &lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;</span><br><span class="line">    &lt;java.version&gt;1.8&lt;/java.version&gt;</span><br><span class="line">  &lt;/properties&gt;</span><br><span class="line"></span><br><span class="line">  &lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">      &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">      &lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">  &lt;/dependencies&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;!--To create an executable jar, we need to add the spring-boot-maven-plugin to our pom.xml.</span><br><span class="line">  To do so, insert the following lines just below the dependencies section:--&gt;</span><br><span class="line">  &lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">      &lt;plugin&gt;</span><br><span class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">      &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">  &lt;/build&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/06/spring-boot-1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -2084,9 +1202,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/uploads/avatar.jpg"
-                alt="Frank Yuan" />
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="Frank Yuan">
             
               <p class="site-author-name" itemprop="name">Frank Yuan</p>
               <p class="site-description motion-element" itemprop="description">Solid SDE</p>
@@ -2099,7 +1215,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2114,7 +1230,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -2143,7 +1261,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -2202,7 +1326,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -2216,7 +1340,7 @@
 
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.9.0</div>
 
 
 
@@ -2394,25 +1518,15 @@
   
     
       
+    
+      
+    
+      
+    
+      
+    
+      
         
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
       
     
   
