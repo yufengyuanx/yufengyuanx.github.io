@@ -134,24 +134,25 @@
 
 
 
-  <meta name="description" content="Solid SDE">
-<meta name="keywords" content="Java, Computer Science, Learn, Python">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Frank">
-<meta property="og:url" content="http://yufengyuanx.github.io/tags/WebSocket/index.html">
+  <meta name="description" content="使用场景在工作中经常会遇到的一个问题，一连串要修复好几个bug，在本地的commit信息大概是这样的123git commit -am &quot;fix: 修复bug 9991&quot;git commit -am &quot;fix: 修复bug 9992&quot;git commit -am &quot;fix: 修复bug 9993&quot; 又到了一天一次的merge时间了（虚拟出来的，其实我们公司没有这么严格的制度） 突然发现 git c">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git常用命令之Git cherry-pick">
+<meta property="og:url" content="http://yufengyuanx.github.io/2019/07/16/Git-2/index.html">
 <meta property="og:site_name" content="Frank">
-<meta property="og:description" content="Solid SDE">
+<meta property="og:description" content="使用场景在工作中经常会遇到的一个问题，一连串要修复好几个bug，在本地的commit信息大概是这样的123git commit -am &quot;fix: 修复bug 9991&quot;git commit -am &quot;fix: 修复bug 9992&quot;git commit -am &quot;fix: 修复bug 9993&quot; 又到了一天一次的merge时间了（虚拟出来的，其实我们公司没有这么严格的制度） 突然发现 git c">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-16T14:19:39.570Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Frank">
-<meta name="twitter:description" content="Solid SDE">
+<meta name="twitter:title" content="Git常用命令之Git cherry-pick">
+<meta name="twitter:description" content="使用场景在工作中经常会遇到的一个问题，一连串要修复好几个bug，在本地的commit信息大概是这样的123git commit -am &quot;fix: 修复bug 9991&quot;git commit -am &quot;fix: 修复bug 9992&quot;git commit -am &quot;fix: 修复bug 9993&quot; 又到了一天一次的merge时间了（虚拟出来的，其实我们公司没有这么严格的制度） 突然发现 git c">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yufengyuanx.github.io/tags/WebSocket/">
+  <link rel="canonical" href="http://yufengyuanx.github.io/2019/07/16/Git-2/">
 
 
 
@@ -161,7 +162,7 @@
   };
 </script>
 
-  <title>Tag: WebSocket | Frank</title>
+  <title>Git常用命令之Git cherry-pick | Frank</title>
   
 
 
@@ -208,7 +209,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,7 +265,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
   </li>
@@ -313,82 +314,196 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>WebSocket<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yufengyuanx.github.io/2019/07/16/Git-2/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Frank Yuan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/18/WebSocket/" itemprop="url">
-              
-                <span itemprop="name">WebSocket</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Git常用命令之Git cherry-pick
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-08-18T15:10:50+08:00" content="2018-08-18">
-          08-18
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-07-16 21:41:17 / Modified: 22:19:39" itemprop="dateCreated datePublished" datetime="2019-07-16T21:41:17+08:00">2019-07-16</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h1><p>在工作中经常会遇到的一个问题，一连串要修复好几个bug，在本地的commit信息大概是这样的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git commit -am <span class="string">"fix: 修复bug 9991"</span></span><br><span class="line">git commit -am <span class="string">"fix: 修复bug 9992"</span></span><br><span class="line">git commit -am <span class="string">"fix: 修复bug 9993"</span></span><br></pre></td></tr></table></figure></p>
+<p>又到了一天一次的merge时间了（虚拟出来的，其实我们公司没有这么严格的制度）</p>
+<p>突然发现 <code>git commit -am &quot;fix: 修复bug 9992&quot;</code> 这次commit有点问题, 怎么办呢，没法全merge过去<br>要是等修好了估计又要等明天了，辛苦的工作了一天，一行代码没有merge上去，但是 9991 和 9993命名修复好了，有没有什么方法这次提交的时候只提交这两个commit呢。。。。。。</p>
+<p>恩，有的，就是这个cherry-pick</p>
+<p>git cherry-pick可以理解为”挑拣”提交，它会获取某一个分支的单笔提交，并作为一个新的提交引入到你当前分支上。 当我们需要在本地合入其他分支的提交时，如果我们不想对整个分支进行合并，而是只想将某一次提交合入到本地当前分支上，那么就要使用git cherry-pick了。</p>
+<h1 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h1><p>我在bugs分支上修复了三个bug<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 951b569 (HEAD -&gt; bugs) fix: 修复bug 9993</span><br><span class="line">* 627fa1a fix: 修复bug 9992</span><br><span class="line">* 6e69d45 fix: 修复bug 9991</span><br><span class="line">* b0dca96 init</span><br></pre></td></tr></table></figure></p>
+<p>然后回到主分支</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> ~/Desktop/demo/gitcherrypick   master  git cherry-pick 6e69d45</span><br><span class="line">[master 1abc7fd] fix: 修复bug 9991</span><br><span class="line"> Date: Tue Jul 16 21:58:35 2019 +0800</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br><span class="line"></span><br><span class="line">  ~/Desktop/demo/gitcherrypick   master  git cherry-pick 951b569</span><br><span class="line">[master 1abc7fd] fix: 修复bug 9993</span><br><span class="line"> Date: Tue Jul 16 21:58:35 2019 +0800</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 6063c4c (HEAD -&gt; master) fix: 修复bug 9993</span><br><span class="line">* 1abc7fd fix: 修复bug 9991</span><br><span class="line">* b0dca96 init</span><br></pre></td></tr></table></figure>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/12/Git-1/" rel="next" title="Git常用命令之Git Stash">
+                <i class="fa fa-chevron-left"></i> Git常用命令之Git Stash
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/16/Git-Commit/" rel="prev" title="git commit 提交规范">
+                git commit 提交规范 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -409,8 +524,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -524,6 +648,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用场景"><span class="nav-number">1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栗子"><span class="nav-number">2.</span> <span class="nav-text">栗子</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -676,6 +816,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 
